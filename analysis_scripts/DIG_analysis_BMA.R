@@ -718,7 +718,7 @@ B_DIG_int_00 <- brms::brm(formula =Avg_DIG_mil ~ +1 + (1|ID), data = DIG_int_dat
 # only one predictor
 B_DIG_int_01 <- brms::brm(formula =Avg_DIG_mil ~ TREATMENT + (1|ID), data = DIG_int_data, family = student(link='identity'),
                           chains = 4, iter = 5000, warmup = 1500, seed = 23, control = list(max_treedepth = 15),
-                          save_pars = save_pars(all=T), cores=4, file = "B_DIG_int_02")
+                          save_pars = save_pars(all=T), cores=4, file = "B_DIG_int_01")
 # additive predictors - no interactions
 B_DIG_int_02 <- brms::brm(formula =Avg_DIG_mil ~ TREATMENT +  REC_AGE_D + (1|ID), data = DIG_int_data, family = student(link='identity'),
                           chains = 4, iter = 5000, warmup = 1500, seed = 23, control = list(max_treedepth = 15),
